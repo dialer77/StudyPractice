@@ -11,5 +11,10 @@
         Console.WriteLine($"input: {String.Join(", ", inputs)}");
         Console.WriteLine("output: " + no1.Solve().ToString());
 
+        //No. 1000
+        HS_Lee.No1000 no1000 = new HS_Lee.No1000(inputs);
+        Console.WriteLine($"input: {String.Join(", ", inputs)}");
+        Console.WriteLine("output: " + no1000.Solve().ToString());
+
     }
 }
