@@ -23,5 +23,22 @@
         Console.WriteLine($"input: {String.Join(", ", inputs)}");
         Console.WriteLine("output: " + no1002.Solve().ToString());
 
+        //NO. 1004
+        inputs = new int[] { 2,
+                            -5, 1, 12, 1,
+                            7,
+                            1, 1, 8,
+                            -3, -1, 1,
+                            2, 2, 2,
+                            5, 5, 1,
+                            -4, 5, 1,
+                            12, 1, 1,
+                            12, 1, 2,
+                            -5, 1, 5, 1,
+                            1,
+                            0, 0, 2};
+        HS_Lee.No1004 no1004 = new HS_Lee.No1004(inputs);
+        Console.WriteLine($"input: {String.Join(", ", inputs)}");
+        Console.WriteLine("output: " + string.Join(", ", no1004.Solve().Select(x => x.ToString())));
     }
 }
