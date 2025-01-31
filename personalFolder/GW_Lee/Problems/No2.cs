@@ -10,22 +10,23 @@ namespace GW_Lee.Problems
             int answer = 0;
             int count = 0;
             int othercount = 0;
-            char c = s[0]; 
+            char c = s[0];
 
-        for (int i = 0; i < s.Length; i++) 
-        { 
-            if (count == othercount) 
+            for (int i = 0; i < s.Length; i++)
             {
-                answer++;
-                c = s[i]; 
+                if (count == othercount)
+                {
+                    answer++;
+                    c = s[i];
+                }
+
+
+                if (c == s[i]) count++;
+
+                else othercount++;
             }
-        
 
-        if (c == s[i]) count++; 
-
-        else othercount++;
+            return answer;
         }
-        
-        return answer;
     }
 }

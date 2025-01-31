@@ -5,31 +5,33 @@ namespace GW_Lee.Problems
     {
 
         //https://school.programmers.co.kr/learn/courses/30/lessons/12921
-       public int solution(int n) {
-        int answer = 0;
-        
-        for(int i = 2; i <= n; i++) // 2부터
+        public int solution(int n)
         {
-            if(checksosu(i) == true)
+            int answer = 0;
+
+            for (int i = 2; i <= n; i++) // 2부터
             {
-                answer++;
+                if (checksosu(i) == true)
+                {
+                    answer++;
+                }
             }
+            return answer;
         }
-        return answer;
-    }
-    
-    public bool checksosu(int u)
-    {
-        bool numCheck = true;
-        
-        for(int i = 2; i * i <= u; i++)
+
+        public bool checksosu(int u)
         {
-            if(u % i == 0) //
+            bool numCheck = true;
+
+            for (int i = 2; i * i <= u; i++)
             {
-                numCheck = false;
-                break;
+                if (u % i == 0) //
+                {
+                    numCheck = false;
+                    break;
+                }
             }
+            return numCheck;
         }
-        return numCheck;
     }
 }
